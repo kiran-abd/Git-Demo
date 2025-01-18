@@ -3,6 +3,7 @@ package testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -15,6 +16,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
+@Listeners(TestListenerClass.class)
 public class MavenLoginTest extends BaseClass {
 	
 	
@@ -23,7 +26,7 @@ public class MavenLoginTest extends BaseClass {
 	public void Logintestfailure() {
 		
 		
-		test = report.startTest("LoginTestFailure");
+		//test = report.startTest("LoginTestFailure");
 		
 		LoginPage login = new LoginPage();
 		login.LoginFunction("creatorshashikiran@gmail.com","Reset@134");
@@ -38,7 +41,7 @@ public class MavenLoginTest extends BaseClass {
 		Assert.assertEquals(ActualError, ExpectedError);
 		
 		
-		report.endTest(test);
+		//report.endTest(test);
 	}
 	
 	@Test

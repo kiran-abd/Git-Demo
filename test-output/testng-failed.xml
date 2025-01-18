@@ -8,6 +8,8 @@
           <include name="Logintestfailure"/>
           <include name="TearDown"/>
           <include name="SetUp"/>
+          <include name="DataSetUp"/>
+          <include name="DataTearDown"/>
         </methods>
       </class> <!-- testcases.MavenLoginTest -->
     </classes>
